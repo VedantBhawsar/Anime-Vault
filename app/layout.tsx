@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
@@ -46,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dmSans.className}>
+        <SpeedInsights />
         <main className="max-w-7xl mx-auto bg-[#0F1117]">
           <Hero />
           {children}
